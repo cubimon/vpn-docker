@@ -1,0 +1,13 @@
+version: '3'
+services:
+  vpn:
+    container_name: vpn
+    build: .
+    ports:
+    - 1081:1080
+    #volumes:
+    #- /etc/ssl/certs:/etc/ssl/certs
+    #command: bash -c "update-ca-certificates && bash"
+    privileged: true
+    tty: true # keep container running in background
+
